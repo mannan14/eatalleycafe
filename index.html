@@ -10,10 +10,20 @@
     <link rel='stylesheet' href="./css/index.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="sweetalert2/dist/sweetalert2.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js" ></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
-
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>
+        $(window).scroll(function() {
+            if ($(document).scrollTop() > 50) {
+                $('.nav').addClass('affix');
+                console.log("OK");
+            } else {
+                $('.nav').removeClass('affix');
+            }
+        });
+    </script>
     <title>EatAlley Cafe</title>
     <link rel="icon" href="/images/logo-bg.png" type="image/icon type">
 </head>
@@ -31,6 +41,28 @@
     </nav>
     <section class="home" >
         <!-- Slider main container -->
+        <div class="swiper-container mySwiper" style="padding-bottom: 10px;">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                  <img src="/images/image5.JPG" style="width: 100%;" alt="">
+              </div>
+              <div class="swiper-slide">
+                  <img src="/images/image3.JPG" alt="">
+              </div>
+              <div class="swiper-slide">
+                  <img src="/images/image1.JPG" alt="">
+              </div>
+              <div class="swiper-slide">
+                  <img src="/images/image2.png" alt="">
+              </div>
+              <div class="swiper-slide">
+                  <img src="/images/image4.JPG" alt="">
+              </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
         <div class="swiper-container mySwiper">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
@@ -55,8 +87,7 @@
         </div>
     </section>
     <div>
-        <!-- just to make scrolling effect possible -->
-			<h2 class="myH2">Our Menu:</h2>
+	    <h2 class="myH2">Our Menu:</h2>
             <img src="/images/page1.jpeg" class="page" id="page1" alt="Page1">
             <img src="/images/page2.jpeg" class="page" id="page2" alt="Page1">
     </div>
@@ -97,13 +128,9 @@
              </div>
         </div>
     </section>
-
-    <!--section for location-->
     <section class="location" id="contact">
-        <h1>Contact Us</h1>
-        
+	    <h1>Contact Us</h1>
         <div class="rowmap">
-    
             <div class="over">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.226121054554!2d76.93649651480293!3d11.021654092155426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba859b953752093%3A0xd75b7e83eaf28945!2sEat%20Alley%20Cafe!5e0!3m2!1sen!2sin!4v1620665452236!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="true" loading="lazy"></iframe>
             </div>
@@ -126,18 +153,15 @@
             <div class="conColumn">
                 <i class="fa fa-envelope" aria-hidden="true"></i>
                 <div class="info">
-                    <span  class="icon-mail">eatalleycafe@gmail.com</span>
+                    <span class="icon-mail">eatalleycafe@gmail.com</span>
                     <p>Email us your query</p>
                 </div>
             </div>
             </div>
             </div>
         </div>
-    
     </section>
-
     <footer id="footer" class="footer">
-        
         <p style="font-size: medium; color: aliceblue; margin-left: 20px ;">
             OUR SOCIAL MEDIA LINKS To KEEP YOU UPDATED:
         </p>
@@ -157,22 +181,11 @@
         <p class="order">Page made by:<a class="order" href="https://www.linkedin.com/in/mannan-dassani/">Mannan Dassani</a></p>
     </footer>
     <script src="/js/index.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" asyn crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script>
-        $(window).scroll(function() {
-            if ($(document).scrollTop() > 50) {
-                $('.nav').addClass('affix');
-                console.log("OK");
-            } else {
-                $('.nav').removeClass('affix');
-            }
-        });
-    </script>
     <script>
         var swiper = new Swiper(".mySwiper", {
         spaceBetween: 30,
         centeredSlides: true,
+        loop: true,
         autoplay: {
           delay: 2000,
           disableOnInteraction: false,
