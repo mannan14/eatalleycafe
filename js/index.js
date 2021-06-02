@@ -32,11 +32,11 @@ var form = document.getElementById("my-form");
             'Accept': 'application/json'
         }
       }).then(response => {
-          console.log(response);
+          console.log("Status 400, response OK");
         Swal.fire('Yay...', 'Order has been placed', 'success')
         form.reset()
       }).catch(error => {
-        console.log(error);
+         console.log(error);
         Swal.fire('Could not order', 'Try ordering using swiggy or Zomato', 'error')
         form.reset();
     });
