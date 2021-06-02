@@ -26,6 +26,72 @@
     </script>
     <title>EatAlley Cafe</title>
     <link rel="icon" href="/images/logo-bg.png" type="image/icon type">
+    <style>
+        #slider{
+            display: contents;
+            overflow: hidden;
+            padding-top: 25px;
+        }
+        #slider figure{
+            position: relative;
+            width: 500%;
+            margin: 0;
+            left: 0;
+            animation: 20s slider infinite;
+        }
+        #slider figure img{
+            width: 20%;
+            float: left;
+        }
+        .nodisplay{
+            display: none;
+        }
+        .display{
+            display: contents;
+        }
+        @keyframes slider {
+            0%{
+                left: 0;
+            }
+            20%{
+                left: 0;
+            }
+            25%{
+                left: -100%;
+            }
+            45%{
+                left: -100%;
+            }
+            50%{
+                left: -200%;
+            }
+            70%{
+                left: -200%;
+            }
+            75%{
+                left: -300%;
+            }
+            95%{
+                left: -300%;
+            }
+            100%{
+                left: -400%;
+            }
+
+        }
+
+        @media (min-width:700px) {
+            #slider{
+                display: none;
+            }
+            .swiper-container{
+                display:flex;
+            }
+            .home{
+                height: 150vh;
+            }
+        }
+    </style>
 </head>
 <body>
     <nav class="nav">
@@ -39,24 +105,21 @@
             </div>
         </div>
     </nav>
-    <section class="home" >
+    <section class="home" style="padding-bottom: 5px;">
         <!-- Slider main container -->
         <div class="swiper-container mySwiper" style="padding-bottom: 10px;">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
-                  <img src="/images/image5.JPG" style="width: 100%;" alt="">
+                  <img src="/images/image5.png" style="width: 100%;" alt="">
               </div>
               <div class="swiper-slide">
-                  <img src="/images/image3.JPG" alt="">
+                  <img src="/images/image3.png" alt="">
               </div>
               <div class="swiper-slide">
-                  <img src="/images/image1.JPG" alt="">
+                  <img src="/images/image1.png" alt="">
               </div>
               <div class="swiper-slide">
                   <img src="/images/image2.png" alt="">
-              </div>
-              <div class="swiper-slide">
-                  <img src="/images/image4.JPG" alt="">
               </div>
             </div>
             <div class="swiper-button-next"></div>
@@ -84,6 +147,40 @@
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
             <div class="swiper-pagination"></div>
+        </div>
+        <div id="slider">
+            <figure>
+                <img src="/images/image5.png">
+            </figure>
+            <figure>
+                <img src="/images/image3.png">
+            </figure>
+            <figure>
+                <img src="/images/image1.png">
+            </figure>
+            <figure>
+                <img src="/images/image2.png">
+            </figure>
+            <figure>
+                <img src="/images/image5.png">
+            </figure>
+        </div>
+        <div id="slider">
+            <figure>
+                <img src="/images/mumbaibhel.jpg">
+            </figure>
+            <figure>
+                <img src="/images/sevpuri.jpg">
+            </figure>
+            <figure>
+                <img src="/images/vadapav.jpg">
+            </figure>
+            <figure>
+                <img src="/images/dahipapdi.jpg">
+            </figure>
+            <figure>
+                <img src="/images/mumbaibhel.jpg">
+            </figure>
         </div>
     </section>
     <div>
@@ -170,12 +267,16 @@
 
     <footer id="footer" class="footer">
         
-        <p style="font-size: medium; color: aliceblue; margin-left: 20px ;">
-            OUR SOCIAL MEDIA LINKS To KEEP YOU UPDATED:
+        <p style="font-size: medium; color:aliceblue; margin-left: 20px ;">
+            OUR SOCIAL MEDIA LINKS TO KEEP YOU UPDATED:
         </p>
         <div class="icons">
-            <a class="fa fa-facebook"  aria-hidden="true" href="https://www.facebook.com/eatalleycbe"></a>
-            <a class="fa fa-instagram" aria-hidden="true" href="https://www.instagram.com/eatalleycafe/"></a>
+            <a style="padding: 5px;" aria-hidden="true" href="https://www.facebook.com/eatalleycbe">
+                <img src="/images/facebook.svg" alt="" srcset="">
+            </a>
+            <a style="padding-left: 10px;" aria-hidden="true" href="https://www.instagram.com/eatalleycafe/">
+                <img src="/images/instagram.svg" alt="" srcset="">
+            </a>
         </div>
         <hr>
         <p style="font-size: medium; color: aliceblue; margin-left: 20px ;">
