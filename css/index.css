@@ -6,72 +6,30 @@ body {
     box-sizing:border-box;
     font-family: "Quicksand", sans-serif;
     font-size: 62.5%;
+    overflow-x : hidden;
 }
 .nav {
     width: 100%;
     height: 65px;
     position: fixed;
-    line-height: 65px;
     z-index: 99;
+    line-height: 65px;
 }
 .nav div.logo {
     float: left;
     width: auto;
     height: auto;
-    padding-left: 3rem;
+    padding-left: 5px;
 }
-.nav div.logo a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 2.5rem;
-}
-.nav div.logo a:hover {
-    color: #00E676;
-}
-.nav div.main_list {
-    height: 65px;
-    float: right;
-}
-.nav div.main_list ul {
-    width: 100%;
-    height: 65px;
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.nav div.main_list ul li {
-    width: auto;
-    height: 65px;
-    padding: 0;
-    padding-right: 3rem;
-}
-
-.nav div.main_list ul li a {
-    text-decoration: none;
-    color: #fff;
-    line-height: 65px;
-    font-size: 2.4rem;
-}
-
-.nav div.main_list ul li a:hover {
-    color: #00E676;
-}
-
 .swiggy-logo ,.zomato-logo{
-    
     size: 2px;
     float: right;
     width: 45px;
     height: 45px;
     margin-top: 10px;
-    margin-left:10px;
     margin-right: 10px;
     justify-content: right;
-
 }
-
 .logo{
   display: flex;
   float: left;
@@ -79,25 +37,25 @@ body {
   margin-top: 15px;
 }
 
-
 /* Home section */
 .home {
     width: 100%;
-    height: 100vh;
+    height: 35vh;
     padding-bottom: 500px;
-    background-image: url(/images/logo-bg.png);
+    background-color:  rgb(50, 68, 104);
     padding-top: 100px;
     background-position: center top;
 	  background-size:cover;
 }
 
 .swiper-container {
+  display: none;
   width: 100%;
   height: 80%;
   padding-top: 100px;
 }
-
 .swiper-slide {
+
   background: rgb(50, 68, 104);
   
   /* Center slide text vertically */
@@ -116,9 +74,7 @@ body {
 }
 
 .swiper-slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+ display: contents;
 }
 
 @media (min-width: 700px){
@@ -132,9 +88,9 @@ body {
     height: 100%;
   /* Center slide text vertically */
   display: -webkit-box;
-  /* display: -ms-flexbox; */
-  /* display: -webkit-flex; */
-  /* display: flex; */
+   display: -ms-flexbox; 
+   display: -webkit-flex; 
+   display: flex; 
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -144,15 +100,10 @@ body {
   -webkit-align-items: center;
   align-items: center;
   }
-  .home{
-    background-color: rgb(52,68,107);
-    background-image: none;
-  }
 }
 .navTrigger {
     display: none;
 }
-
 .nav {
     padding-top: 20px;
     padding-bottom: 20px;
@@ -160,82 +111,21 @@ body {
     transition: all 0.4s ease;
 }
 
-
 /* Media qurey section */
-
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     .container {
         margin: 0;
     }
 }
-
 @media screen and (max-width:768px) {
-    .navTrigger {
-        display: block;
-    }
     .nav div.logo {
         margin-left: 15px;
     }
-    .nav div.main_list {
-        width: 100%;
-        height: 0;
-        overflow: hidden;
-    }
-    .nav div.show_list {
-        height: auto;
-        display: none;
-    }
-    .nav div.main_list ul {
-        flex-direction: column;
-        width: 100%;
-        height: 100vh;
-        right: 0;
-        left: 0;
-        bottom: 0;
-        background-color: #111;
-        /*same background color of navbar*/
-        background-position: center top;
-    }
-    .nav div.main_list ul li {
-        width: 100%;
-        text-align: right;
-    }
-    .nav div.main_list ul li a {
-        text-align: center;
-        width: 100%;
-        font-size: 3rem;
-        padding: 20px;
-    }
-    .nav div.media_button {
-        display: block;
-    }
 }
-
-.navTrigger {
-    cursor: pointer;
-    width: 30px;
-    height: 25px;
-    margin: auto;
-    position: absolute;
-    right: 30px;
-    top: 0;
-    bottom: 0;
-}
-
-.navTrigger i {
-    background-color: #fff;
-    border-radius: 2px;
-    content: '';
-    display: block;
-    width: 100%;
-    height: 4px;
-}
-
 .affix {
     padding: 0;
     background-color: #111;
 }
-
 .myH2 {
 	text-align:center;
 	font-size: 4rem;
@@ -251,8 +141,6 @@ body {
 		padding:2%;
 	}
 }
-
-  
 .rowmap {
 	display: flex;
 	justify-content: space-around;
@@ -336,7 +224,7 @@ body {
 	padding-top: 30px;
 	width: 100%;
 	margin: auto;
-	background: #2f4f4f;
+	background: rgb(50, 68, 104);
 	padding-bottom: 30px;
   }
   
@@ -382,11 +270,11 @@ body {
 	margin: 0px 10px;
   }
   
-  .icons .fa {
+  /* .icons .fa {
 	color: #fff;
 	margin: 5px 20px;
 	cursor: pointer;
-  }
+  } */
   
   .icon {
 	display: flex;
@@ -404,10 +292,10 @@ body {
 	.icon {
 	  flex-direction: column;
 	}
-  
 	.icons {
 	  margin: 10px;	
 	}
+  
   }
   
 .order {
@@ -538,8 +426,6 @@ textarea {
     max-width: 1140px;
   }
 }
-
-
 .d-grid {
   display: grid;
 }
@@ -743,4 +629,5 @@ font-size: large;
 .icon-mail{
 display: flex;
 }
+
   
