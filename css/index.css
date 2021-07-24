@@ -638,3 +638,11 @@ display: flex;
   justify-content: center;
   align-items: center;
 }
+
+.whatsapp {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  width: 200px;
+    height: auto;
+}
