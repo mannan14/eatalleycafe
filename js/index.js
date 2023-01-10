@@ -19,7 +19,12 @@ var span = document.getElementsByClassName("close")[0];
 span.onclick = function(){
     modal.style.display = "none";
 }
-
+window.onload = function() { 
+  var el = document.getElementById('g-recaptcha-response'); 
+  if (el) { 
+    el.setAttribute('required', 'required'); 
+  } 
+}
 var form = document.getElementById("my-form");
     
     async function handleSubmit(event) {
