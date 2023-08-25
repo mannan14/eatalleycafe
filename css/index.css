@@ -45,9 +45,9 @@ body {
 
 .swiper-container {
   display: none;
-  width: 100%;
+  width: 80%;
   height: 80%;
-  padding-top: 100px;
+  padding-top: 50px;
 }
 .swiper-slide {
 
