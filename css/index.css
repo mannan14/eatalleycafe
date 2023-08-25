@@ -315,9 +315,9 @@ body {
 .page{
     position: relative;
     width: 300px;
-  	height: 400px;
-	  transition: all 1s;
-	  margin: 10px;
+    height: 300px;
+    transition: all 1s;
+    padding: 10px;
     transition: all 0.3s ease-in;
     justify-content: center;
     align-items: center;
@@ -334,7 +334,7 @@ body {
     left: 0;
     top: 0;
     width: 100%; /* Full width */
-    height: 100%; /* Full height */
+    height: 100vh; /* Full height */
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
